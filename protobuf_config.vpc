@@ -1,0 +1,27 @@
+$Configuration
+{
+	$Compiler [$WINDOWS]
+	{
+        $DisableSpecificWarnings	"$BASE;4065" // switch statement contains 'default' but no 'case' labels
+        $DisableSpecificWarnings	"$BASE;4146" // unary minus operator applied to unsigned type
+        $DisableSpecificWarnings	"$BASE;4244" // 'conversion' conversion from 'type1' to 'type2', possible loss of data
+        $DisableSpecificWarnings	"$BASE;4251" // 'identifier' : class 'type' needs to have dll-interface to be used by clients of class 'type2'
+        $DisableSpecificWarnings	"$BASE;4267" // 'var' : conversion from 'size_t' to 'type', possible loss of data
+        $DisableSpecificWarnings	"$BASE;4305" // 'identifier' : truncation from 'type1' to 'type2'
+        $DisableSpecificWarnings	"$BASE;4307" // 'operator' : integral constant overflow
+        $DisableSpecificWarnings	"$BASE;4309" // 'conversion' : truncation of constant value
+        $DisableSpecificWarnings	"$BASE;4334" // 'operator' : result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+        $DisableSpecificWarnings	"$BASE;4355" // 'this' : used in base member initializer list
+        $DisableSpecificWarnings	"$BASE;4506" // no definition for inline function 'function'
+        $DisableSpecificWarnings	"$BASE;4800" // 'type' : forcing value to bool 'true' or 'false' (performance warning)
+        $DisableSpecificWarnings	"$BASE;4996" // The compiler encountered a deprecated declaration.
+
+        
+    }
+
+    $Compiler
+	{
+        $PreprocessorDefinitions "$BASE;GOOGLE_PROTOBUF_CMAKE_BUILD
+        $AdditionalIncludeDirectories	"$BASE;$SRCDIR\src\"
+    }
+}
