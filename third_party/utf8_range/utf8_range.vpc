@@ -1,0 +1,20 @@
+
+$Macro SRCDIR		"..\..\..\.."
+
+$Include "$SRCDIR\vpc_scripts\source_lib_base.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+        $AdditionalIncludeDirectories	"$BASE;.\"
+	}
+}
+
+$Project "utf8_range"
+{
+    $File "naive.c"
+    $File "range2-neon.c"
+    $File "range2-sse.c"
+    $File "utf8_range.h"
+}

@@ -1,0 +1,20 @@
+
+$Macro SRCDIR		"..\..\..\.."
+
+$Include "$SRCDIR\vpc_scripts\source_lib_base.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+        $AdditionalIncludeDirectories	"$BASE;.\"
+	}
+}
+
+$Project "utf8_validity"
+{
+    $File "utf8_validity.cc"
+    $File "utf8_validity.h"
+
+    // Depends on ABSL::strings
+}
