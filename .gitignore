@@ -212,3 +212,11 @@ compile_commands.json
 
 # Ignore GHA NodeJS files
 .github/**/node_modules/
+
+# VPC
+*.vpc_cache
+_vpc_/
+
+# Visual Studio projects
+*.vcxproj
+*.vcxproj.*
