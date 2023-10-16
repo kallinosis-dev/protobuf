@@ -7,7 +7,7 @@ $Configuration
 {
 	$Compiler
 	{
-        $AdditionalIncludeDirectories	"$BASE;.\"
+        $AdditionalIncludeDirectories	"$BASE;.\;..\abseil-cpp\"
 	}
 }
 
