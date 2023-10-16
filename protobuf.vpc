@@ -199,8 +199,10 @@ $Project "protobuf"
 	$File src/google/protobuf/wire_format.h
 	$File src/google/protobuf/wire_format_lite.h
 
-	// $Lib CMAKE_THREAD_LIBS_INIT
-	// $Lib protobuf_ABSL_USED_TARGETS
-	$Lib utf8_range
-	$Lib utf8_validity
+	$Folder "Libs" 
+	{
+		$Lib "abseil"
+		$Lib utf8_range
+		$Lib utf8_validity
+	}
 }

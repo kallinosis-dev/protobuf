@@ -231,7 +231,9 @@ $Project "protoc"
 	$File src/google/protobuf/compiler/versions_suffix.h
 	$File src/google/protobuf/compiler/zip_writer.h
 
-
-	// $Lib protobuf_ABSL_USED_TARGETS
-	$Lib protobuf
+	$Folder "Libs" 
+	{
+		$Lib abseil
+		$Lib protobuf
+	}
 }
