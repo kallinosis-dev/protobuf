@@ -73,7 +73,7 @@ $Project "protobuf"
 		{ 
 			$Compiler 
 			{
-				$ObjectFileName "$(IntDir)/json_internal"
+				$ObjectFileName "$(IntDir)/json_internal/"
 			}
 		}
 	}

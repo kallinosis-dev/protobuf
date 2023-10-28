@@ -21,7 +21,7 @@ $Configuration
 
     $Compiler
 	{
-        $PreprocessorDefinitions "$BASE;GOOGLE_PROTOBUF_CMAKE_BUILD
-        $AdditionalIncludeDirectories	"$BASE;$SRCDIR\src\"
+        $PreprocessorDefinitions "$BASE;GOOGLE_PROTOBUF_CMAKE_BUILD"
+        $AdditionalIncludeDirectories	"$BASE;.\src\;.\third_party\abseil-cpp\;.\third_party\utf8_range"
     }
 }
