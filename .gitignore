@@ -223,3 +223,7 @@ _vpc_/
 
 [Dd]ebug/
 [Rr]elease/
+[Dd]ebug_Protobuf/
+[Rr]elease_Protobuf/
+[Dd]ebug_Protoc/
+[Rr]elease_Protoc/

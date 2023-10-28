@@ -5,6 +5,24 @@ $Macro SRCDIR		"..\.."
 $Include "$SRCDIR\vpc_scripts\source_lib_base.vpc"
 $Include "protobuf_config.vpc"
 
+$Configuration	"Debug"
+{
+	$General
+	{
+		$OutputDirectory			".\Debug_Protobuf"
+		$IntermediateDirectory		".\Debug_Protobuf"
+	}
+}
+
+$Configuration	"Release"
+{
+	$General
+	{
+		$OutputDirectory			".\Release_Protobuf"
+		$IntermediateDirectory		".\Release_Protobuf"
+	}
+}
+
 $Project "protobuf"
 {
 	// libprotobuf_srcs

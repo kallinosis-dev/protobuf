@@ -4,6 +4,24 @@ $Macro OUTBINDIR	"$SRCDIR\devtools\bin"
 $Include "$SRCDIR\vpc_scripts\source_exe_con_base.vpc"
 $Include "protobuf_config.vpc"
 
+$Configuration	"Debug"
+{
+	$General
+	{
+		$OutputDirectory			".\Debug_Protoc"
+		$IntermediateDirectory		".\Debug_Protoc"
+	}
+}
+
+$Configuration	"Release"
+{
+	$General
+	{
+		$OutputDirectory			".\Release_Protoc"
+		$IntermediateDirectory		".\Release_Protoc"
+	}
+}
+
 $Project "protoc" 
 {
 	$Folder "Compiler - C++"
