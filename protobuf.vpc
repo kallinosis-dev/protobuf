@@ -28,6 +28,15 @@ $Project "protobuf"
 	$File src/google/protobuf/arenaz_sampler.cc
 	$File src/google/protobuf/compiler/importer.cc
 	$File src/google/protobuf/compiler/parser.cc
+	{
+		$Configuration 
+		{ 
+			$Compiler 
+			{
+				$ObjectFileName "$(IntDir)/compiler/"
+			}
+		}
+	}
 	$File src/google/protobuf/cpp_features.pb.cc
 	$File src/google/protobuf/descriptor.cc
 	$File src/google/protobuf/descriptor.pb.cc
@@ -59,6 +68,15 @@ $Project "protobuf"
 	$File src/google/protobuf/json/internal/lexer.cc
 	$File src/google/protobuf/json/internal/message_path.cc
 	$File src/google/protobuf/json/internal/parser.cc
+	{
+		$Configuration 
+		{ 
+			$Compiler 
+			{
+				$ObjectFileName "$(IntDir)/json_internal"
+			}
+		}
+	}
 	$File src/google/protobuf/json/internal/unparser.cc
 	$File src/google/protobuf/json/internal/untyped_message.cc
 	$File src/google/protobuf/json/internal/writer.cc
