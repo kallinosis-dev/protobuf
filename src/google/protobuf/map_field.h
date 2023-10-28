@@ -598,6 +598,7 @@ class TypeDefinedMapFieldBase : public MapFieldBase {
 
  protected:
   friend struct MapFieldTestPeer;
+  friend MapFieldBase;
 
   using Iter = typename Map<Key, T>::const_iterator;
 
@@ -663,24 +664,20 @@ class MapField final : public TypeDefinedMapFieldBase<Key, T> {
   }
 
  private:
+  friend MapFieldBase;
+
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
 
   static const Message* GetPrototypeImpl(const MapFieldBase& map);
 
-  static const MapFieldBase::VTable kVTable;
+  static constexpr MapFieldBase::VTable kVTable =
+      MapField::template MakeVTable<MapField>();
 
   friend class google::protobuf::Arena;
   friend class MapFieldBase;
   friend class MapFieldStateTest;  // For testing, it needs raw access to impl_
 };
-
-template <typename Derived, typename Key, typename T,
-          WireFormatLite::FieldType kKeyFieldType_,
-          WireFormatLite::FieldType kValueFieldType_>
-constexpr MapFieldBase::VTable
-    MapField<Derived, Key, T, kKeyFieldType_, kValueFieldType_>::kVTable =
-        MapField::template MakeVTable<MapField>();
 
 template <typename Key, typename T>
 bool AllAreInitialized(const TypeDefinedMapFieldBase<Key, T>& field) {
