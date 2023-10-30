@@ -1170,7 +1170,7 @@ void MessageGenerator::GenerateClassDefinition(io::Printer* p) {
     // Templatize constexpr constructor as a workaround for a bug in gcc 12
     // (warning in gcc 13).
     p->Emit(R"cc(
-      class $classname$ final
+      class $classname$
           : public ::$proto_ns$::internal::MapEntry$lite$<
                 $classname$, $key_cpp$, $val_cpp$,
                 ::$proto_ns$::internal::WireFormatLite::$key_wire_type$,
@@ -1262,7 +1262,7 @@ void MessageGenerator::GenerateClassDefinition(io::Printer* p) {
   }
 
   format(
-      "class $dllexport_decl $${1$$classname$$}$ final :\n"
+      "class $dllexport_decl $${1$$classname$$}$ :\n"
       "    public $superclass$ /* @@protoc_insertion_point("
       "class_definition:$full_name$) */ {\n",
       descriptor_);
